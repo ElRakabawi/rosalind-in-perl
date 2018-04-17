@@ -4,7 +4,7 @@ use strict;
 use Memoize;
 
 
-memoize('rec_rel');
+memoize('rec_rel'); #Using memoize to trade of space for time (Function Acceleration)
 
 
 # Compute Recurrence relation sequence (returning n-th element)
@@ -18,5 +18,4 @@ sub rec_rel {
 chomp(my $line = <>);
 #n -> Number of generations (n-th el in seq), k -> number of rabbit pairs per generation
 my ($n, $k) = split " ", $line;
-
 print rec_rel($n, $k) . " ";
